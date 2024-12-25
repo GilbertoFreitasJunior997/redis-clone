@@ -1,11 +1,16 @@
 {
-  "name": "redis-clone-server",
-  "module": "index.ts",
-  "type": "module",
-  "devDependencies": {
-    "@types/bun": "latest"
-  },
-  "peerDependencies": {
-    "typescript": "^5.0.0"
-  }
+	"name": "redis-clone-server",
+	"type": "module",
+	"scripts": {
+		"dev": "bun --watch index.ts"
+	},
+	"devDependencies": {
+		"@betof/biome": "^1.0.2",
+		"@biomejs/biome": "^1.9.4",
+		"@types/bun": "latest",
+		"typescript": "^5.7.2"
+	},
+	"dependencies": {
+		"zod": "^3.24.1"
+	}
 }
