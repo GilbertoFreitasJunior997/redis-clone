@@ -13,7 +13,8 @@ export const ttlAction: ActionHandler<typeof ttlActionSchema> = ({ data }) => {
     return -1;
   }
 
-  const remainingTime = new Date().getTime() - entry.createdAt.getTime();
+  const elapsedTime = new Date().getTime() - entry.createdAt.getTime();
+  const remainingTime = entry.expiresIn - elapsedTime;
 
   return remainingTime;
 };

@@ -16,6 +16,7 @@ export const setAction: ActionHandler<typeof setActionSchema> = ({ data }) => {
   // the time user submitted
   const createdAt = new Date();
   let timeoutId: number | undefined = undefined;
+
   if (expiresIn) {
     timeoutId = setTimeout(() => {
       entriesDictionary.delete(key);
@@ -29,5 +30,5 @@ export const setAction: ActionHandler<typeof setActionSchema> = ({ data }) => {
     expiresIn,
   });
 
-  return null;
+  return "OK";
 };

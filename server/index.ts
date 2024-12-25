@@ -7,7 +7,7 @@ Bun.serve({
     try {
       const result = await actionCaller(request);
 
-      if (result) {
+      if (result !== undefined) {
         return Response.json(result);
       }
 
