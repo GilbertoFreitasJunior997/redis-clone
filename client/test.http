@@ -1,0 +1,42 @@
+POST http://localhost:3000
+content-type: application/json
+
+{
+    "action": "set",
+    "key": "name",
+    "value": "beto",
+    "expiresIn": 60000
+}
+
+###
+
+POST http://localhost:3000
+content-type: application/json
+
+{
+    "action": "get",
+    "key": "name"
+}
+
+###
+
+POST http://localhost:3000
+content-type: application/json
+
+{
+    "action": "ttl",
+    "key": "name"
+}
+
+###
+
+POST http://localhost:3000
+content-type: application/json
+
+{
+    "action": "del",
+    "key": "name"
+}
+
+###
+
